@@ -1,0 +1,321 @@
+@charset "UTF-8";
+html {
+  font-size: 62.5%;
+}
+
+/* color変数 */
+body {
+  color: #707070;
+  font-size: 1.3rem;
+  counter-reset: number 0;
+  line-height: 1.8;
+  letter-spacing: 0.05em;
+  font-family: Avenir, "Helvetica neue", Helvetica, "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, "ＭＳ Ｐゴシック", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+
+/* color変数 */
+/* ヘルパークラス */
+.hp_reverse {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+.hp_br-pc {
+  display: block;
+}
+
+.hp_br-tb {
+  display: none;
+}
+
+.hp_br-sp {
+  display: none;
+}
+
+.hp_disb {
+  display: block;
+}
+
+.hp_fs-sm {
+  font-size: 80%;
+}
+
+.hp_mr10 {
+  margin-right: 10px;
+}
+
+.hp_ml10 {
+  margin-left: 10px;
+}
+
+.hp_mb10 {
+  margin-bottom: 10px;
+}
+
+.hp_mt10 {
+  margin-top: 10px;
+}
+
+.hp_mr30 {
+  margin-right: 30px;
+}
+
+.hp_ml30 {
+  margin-left: 30px;
+}
+
+.hp_mb30 {
+  margin-bottom: 30px;
+}
+
+.hp_mt30 {
+  margin-top: 30px;
+}
+
+.hp_mr50 {
+  margin-right: 50px;
+}
+
+.hp_ml50 {
+  margin-left: 50px;
+}
+
+.hp_mb50 {
+  margin-bottom: 50px;
+}
+
+.hp_mt50 {
+  margin-top: 50px;
+}
+
+.hp_mr80 {
+  margin-right: 80px;
+}
+
+.hp_ml80 {
+  margin-left: 80px;
+}
+
+.hp_mb80 {
+  margin-bottom: 80px;
+}
+
+.hp_mt80 {
+  margin-top: 80px;
+}
+
+.hp_mr100 {
+  margin-right: 100px;
+}
+
+.hp_ml100 {
+  margin-left: 100px;
+}
+
+.hp_mb100 {
+  margin-bottom: 100px;
+}
+
+.hp_mt100 {
+  margin-top: 100px;
+}
+
+.hp_mtLg {
+  margin-top: 120px;
+}
+
+.hp_mbLg {
+  margin-bottom: 120px;
+}
+
+.hp_mtMd {
+  margin-top: 80px;
+}
+
+.hp_mbMd {
+  margin-bottom: 80px;
+}
+
+.hp_mtSm {
+  margin-top: 30px;
+}
+
+.hp_mbSm {
+  margin-bottom: 30px;
+}
+
+/* padding  */
+.hp_pt30 {
+  padding-top: 30px;
+}
+
+.hp_pb30 {
+  padding-bottom: 30px;
+}
+
+.hp_pt50 {
+  padding-top: 50px;
+}
+
+.hp_pb50 {
+  padding-bottom: 50px;
+}
+
+.hp_pt80 {
+  padding-top: 80px;
+}
+
+.hp_pb80 {
+  padding-bottom: 80px;
+}
+
+.hp_pt120 {
+  padding-top: 120px;
+}
+
+.hp_pb120 {
+  padding-bottom: 120px;
+}
+
+.hp_ptLg {
+  padding-top: 120px;
+}
+
+.hp_pbLg {
+  padding-bottom: 120px;
+}
+
+.hp_mtLg {
+  margin-top: 120px;
+}
+
+.hp_mbLg {
+  margin-bottom: 120px;
+}
+
+.hp_ptMd {
+  padding-top: 80px;
+}
+
+.hp_pbMd {
+  padding-bottom: 80px;
+}
+
+.hp_ptSm {
+  padding-top: 30px;
+}
+
+.hp_pbSm {
+  padding-bottom: 30px;
+}
+
+.hp_MT10 {
+  margin-top: -10px !important;
+}
+
+.hp_MT20 {
+  margin-top: -20px !important;
+}
+
+.hp_MT50 {
+  margin-top: -50px !important;
+}
+
+.hp_MT1e {
+  margin-top: -1em !important;
+}
+
+.hp_sp-br {
+  display: none !important;
+}
+
+.hp_db {
+  display: block !important;
+}
+
+.hp_tac {
+  text-align: center !important;
+}
+
+.hp_tar {
+  text-align: right !important;
+}
+
+.hp_tal {
+  text-align: left !important;
+}
+
+.hp_w400 {
+  width: 400px !important;
+}
+
+.hp_w50p {
+  width: 50% !important;
+}
+
+.hp_lh1_5 {
+  line-height: 1.5 !important;
+}
+
+.hp_flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.hp_jcc {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.hp_jcsb {
+  -webkit-box-pack: justify !important;
+      -ms-flex-pack: justify !important;
+          justify-content: space-between !important;
+}
+
+.hp_jcsa {
+  -ms-flex-pack: distribute !important;
+      justify-content: space-around !important;
+}
+
+.hp_aic {
+  -webkit-box-align: center !important;
+      -ms-flex-align: center !important;
+          align-items: center !important;
+}
+
+.hp_aife {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.hp_clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.hp_clear {
+  clear: both;
+}
+
+.hp_centering {
+  display: block !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+/*# sourceMappingURL=common.css.map */
