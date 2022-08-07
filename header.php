@@ -167,10 +167,6 @@
             <span>▷ </span>
             <p>愛知県名古屋市で通信コンサルティング</p>
         </div>
-        <div class="el_insta">
-            <a href="https://www.instagram.com/kazuki_nextplace/" target="_blank" rel="noopener noreferrer"><i
-                    class="fa-brands fa-instagram"></i></a>
-        </div>
         <div class="c-scrolldown">
             <div class="c-line"></div>
         </div>

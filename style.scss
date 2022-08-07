@@ -63,9 +63,19 @@ h2 {
   max-width: 1180px;
   margin: 0 auto;
 }
-//白ボタンのスタイリング
+.el_insta {
+  z-index: 999;
+  transition: 0.8s;
+  a {
+    color: $white;
+  }
+  &:hover {
+    opacity: 0.5;
+  }
+}
+//基本ボタンのスタイリング
 .btn {
-  z-index: 9999;
+  z-index: 99;
   text-align: center;
   cursor: pointer;
   display: inline-block;
@@ -154,7 +164,7 @@ h2 {
 .hum_btn {
   position: fixed;
   right: 20px;
-  z-index: 9999;
+  z-index: 999;
 }
 
 #test {
@@ -242,6 +252,7 @@ h2 {
   a {
     color: $primary;
   }
+  z-index: -99;
 }
 #test:checked ~ .menu {
   opacity: 1;
@@ -484,20 +495,6 @@ header {
       @include Aviano();
     }
   }
-  .el_insta {
-    color: $white;
-    transition: 0.8s;
-    position: fixed;
-    left: 50px;
-    bottom: 83px;
-    z-index: 999;
-    a {
-      color: $white;
-    }
-    i{
-      font-size: 2.5rem;
-    }
-  }
   .el_copyRight {
     transition: 0.8s;
     position: fixed;
@@ -616,11 +613,6 @@ header {
     .el_tel {
       color: $primary;
       transition: 0.8s;
-    }
-  }
-  .el_insta{
-    a{
-      color: $primary;
     }
   }
   .bl_newsbox {
@@ -789,6 +781,9 @@ header {
   }
   &_txt {
   }
+  .btn {
+    z-index: 99;
+  }
 }
 .space {
   flex: 0.5;
@@ -799,8 +794,8 @@ header {
 #about {
   height: 100vh;
   background-color: $white;
-  z-index: -1;
   .bl_section {
+    z-index: 0;
     &_ttl {
       color: $primary;
       transition: 0.5s;
@@ -813,6 +808,14 @@ header {
       color: $primary;
       transition: 0.5s;
     }
+    .btn {
+      z-index: 99;
+    }
+  }
+  .el_insta {
+    a {
+      color: $white;
+    }
   }
 }
 /*--------------------------------
@@ -821,8 +824,6 @@ header {
 #service {
   height: 100vh;
   background-color: $primary;
-  z-index: -1;
-
   .bl_section {
     &_wrapper {
       max-width: 700px;
@@ -859,7 +860,6 @@ header {
 #message {
   height: 100vh;
   background-color: $white;
-  z-index: -1;
   .bl_section {
     &_ttl {
       color: $primary;
@@ -878,6 +878,11 @@ header {
       color: $primary;
     }
   }
+  .el_insta {
+    a {
+      color: $primary;
+    }
+  }
 }
 /*--------------------------------
 カンパニーセクション
@@ -885,7 +890,6 @@ header {
 #company {
   height: 100vh;
   background-color: $primary;
-  z-index: -1;
   .bl_section {
     &_ttl {
       color: $white;
@@ -920,7 +924,6 @@ header {
 #recruit {
   height: 100vh;
   background-color: $white;
-  z-index: -1;
   .bl_section {
     &_ttl {
       color: $primary;
@@ -942,9 +945,9 @@ header {
 #contact {
   height: 100vh;
   background-color: $primary;
-  z-index: -1;
   .bl_section {
     &_wrapper {
+      z-index: 99;
       max-width: 700px;
       margin-left: auto;
       margin-right: auto;
@@ -1000,7 +1003,6 @@ header {
 ここから各固定ページ
 --------------------------------*/
 #page-about {
-  z-index: -2;
   &.ly_section {
     display: block;
     align-items: unset;
@@ -1031,12 +1033,19 @@ header {
   }
 }
 #page-service {
-  z-index: -2;
+  background-color: $primary;
+  position: relative;
   &.ly_section {
     display: block;
     align-items: unset;
   }
-  background-color: $primary;
+  .el_insta {
+    position: relative;
+    z-index: 999;
+    i {
+      font-size: 2.5rem;
+    }
+  }
   .bl_section {
     &_img {
       z-index: 99;
@@ -1064,7 +1073,6 @@ header {
     &_img {
       text-align: right;
       margin-right: 0px;
-      margin-left: 30px;
     }
     &_header {
       color: $white;
@@ -1133,8 +1141,6 @@ header {
 
 /* コンタクトフォームのスタイリング */
 #page-contact {
-  z-index: -2;
-  // height: 100vh;
   background-color: $primary;
   &.ly_section {
     display: block;
@@ -1146,6 +1152,7 @@ header {
       margin-left: auto;
       margin-right: auto;
       z-index: 99;
+      position: relative;
     }
     &_ttl {
       color: $white;
@@ -1211,6 +1218,7 @@ tr {
   border: 0.5px solid $primary;
   resize: none;
   background-color: $white;
+  z-index: 99;
   &::placeholder {
     color: #dddddd;
   }
@@ -1376,10 +1384,10 @@ tr {
   padding-bottom: 120px;
 }
 .hp_ptLg {
-  padding-top: 120px;
+  padding-top: 180px;
 }
 .hp_pbLg {
-  padding-bottom: 120px;
+  padding-bottom: 180px;
 }
 .hp_mtLg {
   margin-top: 120px;
@@ -1481,7 +1489,6 @@ canvas {
   left: 0;
   height: 100%;
   width: 100%;
-  z-index: -1;
 }
 
 /*========= ローディング画面のためのCSS ===============*/

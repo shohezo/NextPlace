@@ -52,8 +52,22 @@ h2 {
   margin: 0 auto;
 }
 
+.el_insta {
+  z-index: 999;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+}
+
+.el_insta a {
+  color: #ffffff;
+}
+
+.el_insta:hover {
+  opacity: 0.5;
+}
+
 .btn {
-  z-index: 9999;
+  z-index: 99;
   text-align: center;
   cursor: pointer;
   display: inline-block;
@@ -164,7 +178,7 @@ h2 {
 .hum_btn {
   position: fixed;
   right: 20px;
-  z-index: 9999;
+  z-index: 999;
 }
 
 #test {
@@ -261,6 +275,7 @@ h2 {
   padding-bottom: 5%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  z-index: -99;
 }
 
 .menu a {
@@ -580,24 +595,6 @@ header .el_info a {
   font-style: normal;
 }
 
-header .el_insta {
-  color: #ffffff;
-  -webkit-transition: 0.8s;
-  transition: 0.8s;
-  position: fixed;
-  left: 50px;
-  bottom: 83px;
-  z-index: 999;
-}
-
-header .el_insta a {
-  color: #ffffff;
-}
-
-header .el_insta i {
-  font-size: 2.5rem;
-}
-
 header .el_copyRight {
   -webkit-transition: 0.8s;
   transition: 0.8s;
@@ -731,10 +728,6 @@ header .el_summary_txt span {
   color: #003f8c;
   -webkit-transition: 0.8s;
   transition: 0.8s;
-}
-
-.bg-is-white .el_insta a {
-  color: #003f8c;
 }
 
 .bg-is-white .bl_newsbox {
@@ -892,6 +885,10 @@ header .el_summary_txt span {
   font-size: 2.5rem;
 }
 
+.bl_section .btn {
+  z-index: 99;
+}
+
 .space {
   -webkit-box-flex: 0.5;
       -ms-flex: 0.5;
@@ -904,7 +901,10 @@ header .el_summary_txt span {
 #about {
   height: 100vh;
   background-color: #ffffff;
-  z-index: -1;
+}
+
+#about .bl_section {
+  z-index: 0;
 }
 
 #about .bl_section_ttl {
@@ -925,13 +925,20 @@ header .el_summary_txt span {
   transition: 0.5s;
 }
 
+#about .bl_section .btn {
+  z-index: 99;
+}
+
+#about .el_insta a {
+  color: #ffffff;
+}
+
 /*--------------------------------
 サービスセクション
 --------------------------------*/
 #service {
   height: 100vh;
   background-color: #003f8c;
-  z-index: -1;
 }
 
 #service .bl_section_wrapper {
@@ -978,7 +985,6 @@ header .el_summary_txt span {
 #message {
   height: 100vh;
   background-color: #ffffff;
-  z-index: -1;
 }
 
 #message .bl_section_ttl {
@@ -1004,13 +1010,16 @@ header .el_summary_txt span {
   color: #003f8c;
 }
 
+#message .el_insta a {
+  color: #003f8c;
+}
+
 /*--------------------------------
 カンパニーセクション
 --------------------------------*/
 #company {
   height: 100vh;
   background-color: #003f8c;
-  z-index: -1;
 }
 
 #company .bl_section_ttl {
@@ -1051,7 +1060,6 @@ header .el_summary_txt span {
 #recruit {
   height: 100vh;
   background-color: #ffffff;
-  z-index: -1;
 }
 
 #recruit .bl_section_ttl {
@@ -1078,10 +1086,10 @@ header .el_summary_txt span {
 #contact {
   height: 100vh;
   background-color: #003f8c;
-  z-index: -1;
 }
 
 #contact .bl_section_wrapper {
+  z-index: 99;
   max-width: 700px;
   margin-left: auto;
   margin-right: auto;
@@ -1147,7 +1155,6 @@ header .el_summary_txt span {
 ここから各固定ページ
 --------------------------------*/
 #page-about {
-  z-index: -2;
   background-color: #003f8c;
 }
 
@@ -1189,8 +1196,8 @@ header .el_summary_txt span {
 }
 
 #page-service {
-  z-index: -2;
   background-color: #003f8c;
+  position: relative;
 }
 
 #page-service.ly_section {
@@ -1198,6 +1205,15 @@ header .el_summary_txt span {
   -webkit-box-align: unset;
       -ms-flex-align: unset;
           align-items: unset;
+}
+
+#page-service .el_insta {
+  position: relative;
+  z-index: 999;
+}
+
+#page-service .el_insta i {
+  font-size: 2.5rem;
 }
 
 #page-service .bl_section {
@@ -1238,7 +1254,6 @@ header .el_summary_txt span {
 #page-service .bl_section_img {
   text-align: right;
   margin-right: 0px;
-  margin-left: 30px;
 }
 
 #page-service .bl_section_header {
@@ -1322,7 +1337,6 @@ header .el_summary_txt span {
 
 /* コンタクトフォームのスタイリング */
 #page-contact {
-  z-index: -2;
   background-color: #003f8c;
 }
 
@@ -1338,6 +1352,7 @@ header .el_summary_txt span {
   margin-left: auto;
   margin-right: auto;
   z-index: 99;
+  position: relative;
 }
 
 #page-contact .bl_section_ttl {
@@ -1413,6 +1428,7 @@ tr {
   border: 0.5px solid #003f8c;
   resize: none;
   background-color: #ffffff;
+  z-index: 99;
 }
 
 .wpcf7-form-control.wpcf7-text::-webkit-input-placeholder,
@@ -1642,11 +1658,11 @@ tr {
 }
 
 .hp_ptLg {
-  padding-top: 120px;
+  padding-top: 180px;
 }
 
 .hp_pbLg {
-  padding-bottom: 120px;
+  padding-bottom: 180px;
 }
 
 .hp_mtLg {
@@ -1778,7 +1794,6 @@ canvas {
   left: 0;
   height: 100%;
   width: 100%;
-  z-index: -1;
 }
 
 /*========= ローディング画面のためのCSS ===============*/

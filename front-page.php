@@ -28,7 +28,7 @@ Template Name: フロントページ
             Next Place
         </h2>
         <h2>
-            with conviction
+            with conviction.
         </h2>
     </div>
     <!-- <img src=" <?php bloginfo('template_url');?>/img/copy.png" alt="" /> -->
@@ -122,6 +122,10 @@ Template Name: フロントページ
                 <p class="bl_section_txt">
                     代表からの挨拶が入ります。代表からの挨拶が入ります。代表からの挨拶が入ります。代表からの挨拶が入ります。代表からの挨拶が入ります。
                 <p>代表 梁原 一樹</p>
+                <div class="el_insta">
+                    <a href="https://www.instagram.com/kazuki_nextplace/" target="_blank" rel="noopener noreferrer"><i
+                            class="fa-brands fa-instagram"></i></a>
+                </div>
             </div>
             <div class="space"></div>
         </div>
