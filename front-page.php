@@ -98,7 +98,7 @@ Template Name: フロントページ
                 </p>
             </div>
         </div>
-        <a href="#<?php bloginfo('url');?>/service" class="btn btn__blue hp_mtSm">
+        <a href="<?php bloginfo('url');?>/service" class="btn btn__blue hp_mtSm">
             <svg>
                 <rect x="0" y="0" fill="none" width="100%" height="100%" />
             </svg>

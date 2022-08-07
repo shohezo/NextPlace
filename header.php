@@ -85,41 +85,50 @@
 
 <body>
     <?php wp_body_open();?>
-    <!---画面遷移用-->
-    <!-- <div id="splash">
-        <div id="splash-logo"><img src="<?php bloginfo('template_url');?>/img/logo_yoko_white.png" alt="" /></div>
-    </div>
-    <div class="splashbg"></div> -->
-    <!-- <div id="container"> -->
-    <header>
-        <div class="header__lines">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
+    <!--初回のローディングアニメーション -->
+    <div class="loading">
+        <div class="loading-animation">
+            <a class="el_logo">
+                <img src=" <?php bloginfo('template_url');?>/img/logo_yoko.png" alt="ロゴマーク" />
+            </a>
         </div>
-        <div class="ly_inner hp_flex">
-            <a href="#" class="el_logo">
-                <img src="<?php bloginfo('template_url');?>/img/logo_yoko.png" alt="" />
-            </a>
-            <a href="#" class="el_logo_white">
-                <img src="<?php bloginfo('template_url');?>/img/logo_yoko_white.png" alt="" />
-            </a>
-            <nav>
-                <ul class="bl_header_list hp_flex hp_jcsb">
-                    <li class="bl_header_item">
-                        <a
-                            href="<?php echo esc_url(home_url('/'));?>"><span>H</span><span>O</span><span>M</span><span>E</span></a>
-                    </li>
-                    <li class="bl_header_item">
-                        <a
-                            href="<?php bloginfo('url');?>/about"><span>A</span><span>B</span><span>O</span><span>U</span><span>T</span></a>
-                    </li>
-                    <li class="bl_header_item">
-                        <a
-                            href="<?php bloginfo('url');?>/service"><span>S</span><span>E</span><span>R</span><span>V</span><span>I</span><span>C</span><span>E</span></a>
-                    </li>
-                    <!-- <li class="bl_header_item">
+    </div>
+    <!---画面遷移用-->
+    <div id="splash">
+        <div id="splash-logo"><img src=" <?php bloginfo('template_url');?>/img/loading.png" alt="ローディングの表示" />
+        </div>
+    </div>
+    <div class="splashbg"></div>
+    <div id="container">
+        <header>
+            <div class="header__lines">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="ly_inner hp_flex">
+                <a href="<?php echo esc_url(home_url('/'));?>" class="el_logo">
+                    <img src="<?php bloginfo('template_url');?>/img/logo_yoko.png" alt="" />
+                </a>
+                <a href="<?php echo esc_url(home_url('/'));?>" class="el_logo_white">
+                    <img src="<?php bloginfo('template_url');?>/img/logo_yoko_white.png" alt="" />
+                </a>
+                <nav>
+                    <ul class="bl_header_list hp_flex hp_jcsb">
+                        <li class="bl_header_item">
+                            <a
+                                href="<?php echo esc_url(home_url('/'));?>"><span>H</span><span>O</span><span>M</span><span>E</span></a>
+                        </li>
+                        <li class="bl_header_item">
+                            <a
+                                href="<?php bloginfo('url');?>/about"><span>A</span><span>B</span><span>O</span><span>U</span><span>T</span></a>
+                        </li>
+                        <li class="bl_header_item">
+                            <a
+                                href="<?php bloginfo('url');?>/service"><span>S</span><span>E</span><span>R</span><span>V</span><span>I</span><span>C</span><span>E</span></a>
+                        </li>
+                        <!-- <li class="bl_header_item">
                         <a
                             href="#message"><span>M</span><span>E</span><span>S</span><span>S</span><span>A</span><span>G</span><span>E</span></a>
                     </li>
@@ -127,48 +136,48 @@
                         <a
                             href="#company"><span>C</span><span>O</span><span>M</span><span>P</span><span>A</span><span>N</span><span>Y</span></a>
                     </li> -->
-                    <li class="bl_header_item">
-                        <a
-                            href="<?php bloginfo('url');?>/recruit"><span>R</span><span>E</span><span>C</span><span>R</span><span>U</span><span>I</span><span>T</span></a>
-                    </li>
-                    <li class="bl_header_item">
-                        <a
-                            href="<?php bloginfo('url');?>/contact"><span>C</span><span>O</span><span>N</span><span>T</span><span>A</span><span>C</span><span>T</span></a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-        <?php if(is_home()){?>
-        <div class="bl_newsbox">
-            <p class="bl_newsbox_head">TOPICS</p>
-            <p class="bl_newsbox_body">
-                公式LINEから問い合わせ、ご依頼が可能です<br />
-                <a href="https://liff.line.me/1645278921-kWRPP32q/?accountId=969qiyau"><img
-                        src="<?php bloginfo('template_url');?>/img/line.png" style="width: 20px"
-                        alt="" /><span>公</span><span>式</span><span>L</span><span>I</span><span>N</span><span>E</span><span>登</span><span>録</span></a>
-            </p>
-        </div>
-        <?php }?>
-        <div class="el_copyRight">
-            Copyright©NextPlace corp., ltd. All Rights Reserved.
-        </div>
-        <?php if( !is_home()){?>
-        <div class="el_info" style="bottom: 40px">
-            <p>Nagoya Office.</p>
-            <a href="#" class="el_tel">052-935-5666</a>
-        </div>
-        <?php }else if(is_home()){?>
-        <div class="el_info">
-            <p>Nagoya Office.</p>
-            <a href="#" class="el_tel">052-935-5666</a>
-        </div>
-        <?php }else{}?>
-        <div class="el_summary_txt hp_flex hp_aic">
-            <span>▷ </span>
-            <p>愛知県名古屋市で通信コンサルティング</p>
-        </div>
-        <div class="c-scrolldown">
-            <div class="c-line"></div>
-        </div>
-    </header>
-    <?php wp_head();?>
+                        <li class="bl_header_item">
+                            <a
+                                href="<?php bloginfo('url');?>/recruit"><span>R</span><span>E</span><span>C</span><span>R</span><span>U</span><span>I</span><span>T</span></a>
+                        </li>
+                        <li class="bl_header_item">
+                            <a
+                                href="<?php bloginfo('url');?>/contact"><span>C</span><span>O</span><span>N</span><span>T</span><span>A</span><span>C</span><span>T</span></a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <?php if(is_home()){?>
+            <div class="bl_newsbox">
+                <p class="bl_newsbox_head">TOPICS</p>
+                <p class="bl_newsbox_body">
+                    公式LINEから問い合わせ、ご依頼が可能です<br />
+                    <a href="https://liff.line.me/1645278921-kWRPP32q/?accountId=969qiyau"><img
+                            src="<?php bloginfo('template_url');?>/img/line.png" style="width: 20px"
+                            alt="" /><span>公</span><span>式</span><span>L</span><span>I</span><span>N</span><span>E</span><span>登</span><span>録</span></a>
+                </p>
+            </div>
+            <?php }?>
+            <div class="el_copyRight">
+                Copyright©NextPlace corp., ltd. All Rights Reserved.
+            </div>
+            <?php if( !is_home()){?>
+            <div class="el_info" style="bottom: 40px">
+                <p>Nagoya Office.</p>
+                <a href="tel:+81-052-935-5666" class="el_tel">052-935-5666</a>
+            </div>
+            <?php }else if(is_home()){?>
+            <div class="el_info">
+                <p>Nagoya Office.</p>
+                <a href="tel:+81-052-935-5666" class="el_tel">052-935-5666</a>
+            </div>
+            <?php }else{}?>
+            <div class="el_summary_txt hp_flex hp_aic">
+                <span>▷ </span>
+                <p>愛知県名古屋市で通信コンサルティング</p>
+            </div>
+            <div class="c-scrolldown">
+                <div class="c-line"></div>
+            </div>
+        </header>
+        <?php wp_head();?>

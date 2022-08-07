@@ -90,13 +90,13 @@
   }
   header {
     .el_logo {
-      width: 200px;
-      top: 20px;
+      width: 150px;
+      top: 35px;
       left: 20px;
     }
     .el_logo_white {
-      width: 200px;
-      top: 20px;
+      width: 150px;
+      top: 35px;
       left: 20px;
     }
 
@@ -124,12 +124,12 @@
       flex-direction: column;
       bottom: 120px;
       &.none {
-        bottom: 20px;
+        bottom: 40px;
       }
     }
     .bl_newsbox {
       right: 20px;
-      bottom: 20px;
+      bottom: 35px;
     }
   }
   .ly_section {
@@ -146,6 +146,9 @@
   .ly_fv {
     img {
       top: 42%;
+    }
+    .fv_copy{
+      font-size: 2rem;
     }
   }
   .bl_section {
@@ -168,6 +171,9 @@
         object-fit: cover;
       }
     }
+  }
+  #splash-logo {
+    width: 100px;
   }
 
   /* ヘルパークラス */

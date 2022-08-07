@@ -44,7 +44,7 @@ Template Name: サービスページ
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                     eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 </p>
-                <a href=" #" class="btn btn__blue">
+                <a href="https://next-place.net/" class="btn btn__blue">
                     <svg>
                         <rect x="0" y="0" fill="none" width="100%" height="100%" />
                     </svg>STORE</a>

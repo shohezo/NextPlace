@@ -99,13 +99,13 @@
     right: 0px;
   }
   header .el_logo {
-    width: 200px;
-    top: 20px;
+    width: 150px;
+    top: 35px;
     left: 20px;
   }
   header .el_logo_white {
-    width: 200px;
-    top: 20px;
+    width: 150px;
+    top: 35px;
     left: 20px;
   }
   header .el_summary_txt {
@@ -136,11 +136,11 @@
     bottom: 120px;
   }
   header .el_info.none {
-    bottom: 20px;
+    bottom: 40px;
   }
   header .bl_newsbox {
     right: 20px;
-    bottom: 20px;
+    bottom: 35px;
   }
   .ly_section {
     padding-right: 20px;
@@ -155,6 +155,9 @@
   }
   .ly_fv img {
     top: 42%;
+  }
+  .ly_fv .fv_copy {
+    font-size: 2rem;
   }
   .bl_section_ttl {
     font-size: 4rem;
@@ -175,6 +178,9 @@
     height: 200px;
     -o-object-fit: cover;
        object-fit: cover;
+  }
+  #splash-logo {
+    width: 100px;
   }
   /* ヘルパークラス */
   .hp_br-sp {

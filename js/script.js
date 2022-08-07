@@ -123,10 +123,9 @@ $(function () {
   });
 });
 
-
 //ナビとエリアとその数を取得
-var naviItem = $('li.pagenation_item');
-var boxItem = $('section.box');
+var naviItem = $("li.pagenation_item");
+var boxItem = $("section.box");
 var naviNum = naviItem.length;
 var boxNum = boxItem.length;
 //いくつ増えてもいいように配列を用意
@@ -139,27 +138,31 @@ var height = new Array();
 var endPoint = new Array();
 
 //スクロールするたびに以下が起動
-$(window).on('load scroll', function() {
-　　//スクロール量を取得
-    $scrollTopDistance = $(window).scrollTop();
-　　//ナビの数だけ以下を繰り返す
-    for(var a = 0; a < naviNum; a++){
-        naviItemElm[a] = naviItem.eq(a);
-        boxItemElm[a] = boxItem.eq(a);
-　　　　//hrefから#の文字を除く
-        itemKey[a] = naviItemElm[a].find('a').attr('href').replace(/#/g,"");
-        boxKey[a] = boxItemElm[a].attr('id');
-　　　　//-20で反応する位置を調整
-        distance[a] = boxItemElm[a].offset().top - 100;
-        height[a] = boxItemElm[a].outerHeight();
-        endPoint[a] = distance[a] + height[a];
-       //もし、hrefとidが同じで、現在スクロールがボックスの開始地点より大きく、終了地点より小さい場合、class="now"を付与する。
-        if(itemKey[a] == boxKey[a] && $scrollTopDistance > distance[a] && $scrollTopDistance < endPoint[a]){
-            naviItem.eq(a).addClass('now');
-        }else if($scrollTopDistance < distance[a] || $scrollTopDistance > endPoint[a]){
-            naviItem.eq(a).removeClass('now');
-        }
+$(window).on("load scroll", function () {
+  //スクロール量を取得
+  $scrollTopDistance = $(window).scrollTop(); //ナビの数だけ以下を繰り返す
+  for (var a = 0; a < naviNum; a++) {
+    naviItemElm[a] = naviItem.eq(a);
+    boxItemElm[a] = boxItem.eq(a); //hrefから#の文字を除く
+    itemKey[a] = naviItemElm[a].find("a").attr("href").replace(/#/g, "");
+    boxKey[a] = boxItemElm[a].attr("id"); //-20で反応する位置を調整
+    distance[a] = boxItemElm[a].offset().top - 100;
+    height[a] = boxItemElm[a].outerHeight();
+    endPoint[a] = distance[a] + height[a];
+    //もし、hrefとidが同じで、現在スクロールがボックスの開始地点より大きく、終了地点より小さい場合、class="now"を付与する。
+    if (
+      itemKey[a] == boxKey[a] &&
+      $scrollTopDistance > distance[a] &&
+      $scrollTopDistance < endPoint[a]
+    ) {
+      naviItem.eq(a).addClass("now");
+    } else if (
+      $scrollTopDistance < distance[a] ||
+      $scrollTopDistance > endPoint[a]
+    ) {
+      naviItem.eq(a).removeClass("now");
     }
+  }
 });
 
 /* AOS */
@@ -172,21 +175,46 @@ $(document).ready(function () {
 });
 
 //ローディングアニメーション
-$(window).on('load',function(){
-  $("#splash-logo").delay(1200).fadeOut('slow');//ロゴを1.2秒でフェードアウトする記述
-  
+$(window).on("load", function () {
+  $("#splash-logo").delay(1200).fadeOut("slow"); //ロゴを1.2秒でフェードアウトする記述
+
   //=====ここからローディングエリア（splashエリア）を1.5秒でフェードアウトした後に動かしたいJSをまとめる
-  $("#splash").delay(1500).fadeOut('slow',function(){//ローディングエリア（splashエリア）を1.5秒でフェードアウトする記述
-  
-  $('body').addClass('appear');//フェードアウト後bodyにappearクラス付与
-  
-  });
+  $("#splash")
+    .delay(1500)
+    .fadeOut("slow", function () {
+      //ローディングエリア（splashエリア）を1.5秒でフェードアウトする記述
+
+      $("body").addClass("appear"); //フェードアウト後bodyにappearクラス付与
+    });
   //=====ここまでローディングエリア（splashエリア）を1.5秒でフェードアウトした後に動かしたいJSをまとめる
-  
+
   //=====ここから背景が伸びた後に動かしたいJSをまとめたい場合は
-  $('.splashbg').on('animationend', function() { 
-  //この中に動かしたいJSを記載
+  $(".splashbg").on("animationend", function () {
+    //この中に動かしたいJSを記載
   });
   //=====ここまで背景が伸びた後に動かしたいJSをまとめる
-  
-  });
+});
+
+/* 初回のローディングアニメーション */
+$(function () {
+  var webStorage = function () {
+    if (sessionStorage.getItem("access")) {
+      /*
+          2回目以降アクセス時の処理
+        */
+      $(".loading").addClass("none");
+    } else {
+      /*
+          初回アクセス時の処理
+        */
+      sessionStorage.setItem("access", "true"); // sessionStorageにデータを保存
+      $(".loading-animation").addClass("is-active"); // loadingアニメーションを表示
+      setTimeout(function () {
+        // ローディングを数秒後に非表示にする
+        $(".loading").addClass("is-active");
+        $(".loading-animation").removeClass("is-active");
+      }, 5000); // ローディングを表示する時間
+    }
+  };
+  webStorage();
+});
