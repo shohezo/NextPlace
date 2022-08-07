@@ -52,6 +52,11 @@
         s.parentNode.insertBefore(tk, s)
     })(document);
     </script>
+    <!-- aosライブラリの読み込み -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <script type="text/javascript" src="./js/jquery-3.6.0.min.js"></script>
+    <script type=" text/javascript" src="./js/jquery-migrate-1.4.1.min.js"></script>
 </head>
 <!-- ドロワーメニュー -->
 <div class="bl_drawer">
@@ -129,7 +134,8 @@
             <p class="bl_newsbox_head">TOPICS</p>
             <p class="bl_newsbox_body">
                 公式LINEから問い合わせ、ご依頼が可能です<br />
-                <a href="#"><img src="<?php bloginfo('template_url');?>/img/line.png" style="width: 20px"
+                <a href="https://liff.line.me/1645278921-kWRPP32q/?accountId=969qiyau"><img
+                        src="<?php bloginfo('template_url');?>/img/line.png" style="width: 20px"
                         alt="" /><span>公</span><span>式</span><span>L</span><span>I</span><span>N</span><span>E</span><span>登</span><span>録</span></a>
             </p>
         </div>
@@ -140,12 +146,12 @@
         <?php if( !is_home()){?>
         <div class="el_info" style="bottom: 40px">
             <p>Nagoya Office.</p>
-            <a href="#" class="el_tel">000-0000-0000</a>
+            <a href="#" class="el_tel">052-935-5666</a>
         </div>
         <?php }else if(is_home()){?>
         <div class="el_info">
             <p>Nagoya Office.</p>
-            <a href="#" class="el_tel">000-0000-0000</a>
+            <a href="#" class="el_tel">052-935-5666</a>
         </div>
         <?php }else{}?>
         <div class="el_summary_txt hp_flex hp_aic">

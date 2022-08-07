@@ -10,7 +10,7 @@ Template Name: アバウトページ
             <h2>ABOUT</h2>
             <p>当社について</p>
         </div>
-        <div class="bl_section_container hp_flex hp_aic hp_column_sp">
+        <div class="bl_section_container hp_flex hp_aic hp_column_sp" data-aos="fade-up">
             <figure class="bl_section_img">
                 <img src="https://picsum.photos/300/300" />
             </figure>
@@ -27,7 +27,7 @@ Template Name: アバウトページ
         </div>
     </div>
     <div class="bl_section_wrapper">
-        <div class="bl_section_container hp_flex hp_aic hp_column_sp">
+        <div class="bl_section_container hp_flex hp_aic hp_column_sp" data-aos="fade-up">
             <figure class="bl_section_img">
                 <img src="https://picsum.photos/300/300" />
             </figure>
@@ -43,8 +43,8 @@ Template Name: アバウトページ
             <div class="space"></div>
         </div>
     </div>
-    <div class="bl_section_wrapper">
-        <div class="bl_section_container hp_flex hp_aic hp_column_sp">
+    <div class="bl_section_wrapper" data-aos="fade-up">
+        <div class="bl_section_container hp_flex hp_aic hp_column_sp" data-aos="fade-up">
             <figure class="bl_section_img">
                 <img src="https://picsum.photos/300/300" />
             </figure>

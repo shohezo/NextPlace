@@ -203,7 +203,7 @@ body.noscroll {
   transform: translate(-50%, -50%);
   height: 1px;
   width: 40px;
-  background: $primary;
+  background: $white;
   -webkit-transition: ease 0.5s;
   transition: ease 0.5s;
 }
@@ -280,7 +280,7 @@ header {
       display: block;
       background: linear-gradient(
         to bottom,
-        rgb(0, 62, 138) 50%,
+        rgb(255, 255, 255) 50%,
         rgba(255, 255, 255, 0) 50%
       );
       background-position: 0 $line-height-abs;
@@ -309,7 +309,7 @@ header {
     z-index: 1;
     overflow: hidden;
     cursor: pointer;
-    display: block;
+    display: none;
   }
   .el_logo_white {
     transition: 0.8s;
@@ -322,7 +322,7 @@ header {
     z-index: 1;
     overflow: hidden;
     cursor: pointer;
-    display: none;
+    display: white;
   }
   nav {
     transition: 0.8s;
@@ -340,7 +340,7 @@ header {
           font-size: 1.2rem;
           transition: 0.8s;
           @include Aviano();
-          color: $primary;
+          color: $white;
         }
         a span {
           display: inline-block;
@@ -386,26 +386,26 @@ header {
     position: fixed;
     right: 40px;
     bottom: 40px;
-    border: 1px solid $primary;
+    border: 1px solid $white;
     border-right: none;
-    color: $primary;
+    color: $white;
     width: 315px;
     font-size: 90%;
     z-index: 999;
     &_head {
       transition: 0.8s;
       padding: 2px 10px;
-      border-bottom: 1px solid $primary;
+      border-bottom: 1px solid $white;
       @include Aviano();
     }
     &_body {
       a {
-        color: $primary;
+        color: $white;
       }
       a {
         font-size: 1.2rem;
         transition: 0.8s;
-        color: $primary;
+        color: $white;
       }
       a span {
         display: inline-block;
@@ -468,7 +468,7 @@ header {
     right: 45px;
     display: flex;
     bottom: 140px;
-    color: $primary;
+    color: $white;
     z-index: 999;
     p {
       transition: 0.8s;
@@ -476,7 +476,7 @@ header {
     }
     a {
       transition: 0.8s;
-      color: $primary;
+      color: $white;
       @include Aviano();
     }
   }
@@ -485,7 +485,7 @@ header {
     position: fixed;
     right: -70px;
     bottom: 50%;
-    color: $primary;
+    color: $white;
     transform: rotate(-90deg);
     font-size: 1rem;
     z-index: 999;
@@ -495,7 +495,7 @@ header {
     position: fixed;
     left: 38px;
     top: 14px;
-    color: $primary;
+    color: $white;
     z-index: 999;
     font-size: 1.2rem;
     span {
@@ -515,7 +515,7 @@ header {
   span {
     transition: 0.8s;
     position: absolute;
-    background: $primary;
+    background: $white;
     &:nth-child(odd) {
       width: 1px;
       height: 100%;
@@ -555,61 +555,61 @@ header {
   }
 }
 //セクションごとの色の変化
-.bg-is-blue {
+.bg-is-white {
   .bl_drawerBtn .hambarg {
-    background: $white;
+    background: $primary;
   }
   .el_logo {
-    display: none;
+    display: block;
   }
   .el_logo_white {
-    display: block;
+    display: none;
   }
   .header__lines {
     span {
       transition: 0.8s;
-      background: $white;
+      background: $primary;
     }
   }
   header nav .bl_header_item {
     a {
-      color: $white;
+      color: $primary;
     }
   }
   .el_copyRight {
-    color: $white;
+    color: $primary;
     transition: 0.8s;
   }
-  .pagenation a {
-    border: 1px solid $white;
+  .pagenation li {
+    border: 1px solid $primary;
     transition: 0.8s;
   }
-  .pagenation a.active {
-    background: $white;
+  .pagenation li.now {
+    background: $primary;
     transition: 0.8s;
   }
   .el_summary_txt {
-    color: $white;
+    color: $primary;
     transition: 0.8s;
   }
   .el_info {
-    color: $white;
+    color: $primary;
     transition: 0.8s;
     .el_tel {
-      color: $white;
+      color: $primary;
       transition: 0.8s;
     }
   }
   .bl_newsbox {
-    color: $white;
+    color: $primary;
     transition: 0.8s;
   }
   .bl_newsbox {
-    color: $white;
+    color: $primary;
     transition: 0.8s;
-    border: 1px solid $white;
+    border: 1px solid $primary;
     &_head {
-      border-bottom: 1px solid $white;
+      border-bottom: 1px solid $primary;
     }
   }
   .c-scrolldown {
@@ -630,12 +630,12 @@ header {
   .bl_section {
     &_ttl {
       &::after {
-        background-color: $white;
+        background-color: $primary;
       }
     }
   }
 }
-//セクションスクロール　ページネーション
+//セクションスクロールページネーション
 .pagenation {
   padding: 20px;
   position: fixed;
@@ -647,15 +647,15 @@ header {
   list-style-type: none;
   margin-bottom: 20px;
 }
-.pagenation a {
+.pagenation li {
   transition: 0.8s;
   display: block;
   height: 10px;
-  border: 1px solid $primary;
+  border: 1px solid $white;
   width: 10px;
 }
-.pagenation a.active {
-  background: $primary;
+.pagenation li.now {
+  background: $white;
 }
 /*--------------------------------
 ファーストビュー
@@ -663,73 +663,65 @@ header {
 .ly_fv {
   height: 100vh;
   position: relative;
-  &::after {
-    /* 透過させた黒を重ねる （擬似要素で実装）*/
-    background-color: rgba(255, 255, 255, 0.5);
-    /* どの範囲に重ねるかを指定 */
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    content: " ";
-    z-index: -1;
-  }
+  background-color: $primary;
   .fv_copy {
     @include Aviano();
+    color: $white;
     line-height: 1.2;
     letter-spacing: 0.1em;
-    font-size: 5rem;
+    font-size: 3rem;
     text-align: left;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
-  img {
-    /*要素の配置*/
-    position: absolute;
-    /*要素を天地中央寄せ*/
-    top: 50%;
-    left: 50%;
-    width: clamp(295px, 60%, 500px);
-    height: auto;
-    transform: translateY(-50%) translateX(-50%);
-  }
-  #video-area {
-    position: fixed;
-    z-index: -1; /*最背面に設定*/
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    overflow: hidden;
-  }
-  #video {
-    /*天地中央配置*/
-    position: absolute;
-    z-index: -1;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    /*縦横幅指定*/
-    width: 177.77777778vh; /* 16:9 の幅→16 ÷ 9＝ 177.77% */
-    height: 56.25vw; /* 16:9の幅 → 9 ÷ 16 = 56.25% */
-    min-height: 100%;
-    min-width: 100%;
-  }
+  // img {
+  //   /*要素の配置*/
+  //   position: absolute;
+  //   /*要素を天地中央寄せ*/
+  //   top: 50%;
+  //   left: 50%;
+  //   width: clamp(295px, 60%, 500px);
+  //   height: auto;
+  //   transform: translateY(-50%) translateX(-50%);
+  // }
+  // #video-area {
+  //   position: fixed;
+  //   z-index: -1; /*最背面に設定*/
+  //   top: 0;
+  //   right: 0;
+  //   left: 0;
+  //   bottom: 0;
+  //   overflow: hidden;
+  // }
+  // #video {
+  //   /*天地中央配置*/
+  //   position: absolute;
+  //   z-index: -1;
+  //   top: 50%;
+  //   left: 50%;
+  //   transform: translate(-50%, -50%);
+  //   /*縦横幅指定*/
+  //   width: 177.77777778vh; /* 16:9 の幅→16 ÷ 9＝ 177.77% */
+  //   height: 56.25vw; /* 16:9の幅 → 9 ÷ 16 = 56.25% */
+  //   min-height: 100%;
+  //   min-width: 100%;
+  // }
 }
 /*--------------------------------
 セクション共通
 --------------------------------*/
 .bl_section {
   &_wrapper {
+    max-width: 900px;
     width: 80%;
     margin-left: auto;
     z-index: 99;
   }
   &_container {
     padding-top: 30px;
+    max-width: 900px;
   }
   &_ttl {
     @include Aviano();
@@ -749,17 +741,24 @@ header {
       height: 1px;
       width: 100%;
       bottom: -1rem;
+      transition: 0.5s;
       background-color: $white;
     }
   }
   &_img {
     flex: 2;
     margin-right: 30px;
+    img {
+      width: 300px;
+      height: 300px;
+      object-fit: cover;
+    }
   }
   &_body {
     flex: 2;
   }
   &_header {
+    @include Mplus1p();
     line-height: 1.3;
     margin-top: 20px;
     margin-bottom: 10px;
@@ -776,18 +775,18 @@ header {
 --------------------------------*/
 #about {
   height: 100vh;
-  background-color: $primary;
+  background-color: $white;
   .bl_section {
     &_ttl {
-      color: $white;
+      color: $primary;
       transition: 0.5s;
     }
     &_header {
-      color: $white;
+      color: $primary;
       transition: 0.5s;
     }
     &_txt {
-      color: $white;
+      color: $primary;
       transition: 0.5s;
     }
   }
@@ -797,7 +796,7 @@ header {
 --------------------------------*/
 #service {
   height: 100vh;
-  background-color: $white;
+  background-color: $primary;
   .bl_section {
     &_wrapper {
       max-width: 700px;
@@ -806,13 +805,13 @@ header {
       text-align: center;
     }
     &_container {
-      color: $primary;
+      color: $white;
     }
     &_ttl {
-      color: $primary;
+      color: $white;
       text-align: center;
       &::after {
-        background-color: $primary;
+        background-color: $white;
         width: 100%;
         position: absolute;
         left: 50%;
@@ -826,10 +825,6 @@ header {
     &_body {
       flex: 2;
     }
-    &_txt {
-    }
-    .el_btn {
-    }
   }
 }
 /*--------------------------------
@@ -837,22 +832,22 @@ header {
 --------------------------------*/
 #message {
   height: 100vh;
-  background-color: $primary;
+  background-color: $white;
   .bl_section {
     &_ttl {
-      color: $white;
+      color: $primary;
       transition: 0.5s;
     }
     &_header {
-      color: $white;
+      color: $primary;
       transition: 0.5s;
     }
     &_txt {
-      color: $white;
+      color: $primary;
       transition: 0.5s;
     }
     &_body {
-      color: $white;
+      color: $primary;
     }
   }
 }
@@ -861,21 +856,23 @@ header {
 --------------------------------*/
 #company {
   height: 100vh;
-  background-color: $white;
+  background-color: $primary;
   .bl_section {
     &_ttl {
-      color: $primary;
+      color: $white;
       transition: 0.5s;
-      &::after {
-        background-color: $primary;
-      }
     }
   }
   .bl_company {
+    width: 80%;
     dt {
       width: 30%;
       padding: 20px 0;
       float: left;
+      color: $white;
+    }
+    dd {
+      color: $white;
     }
     .bl_company_definition {
       width: 70%;
@@ -883,7 +880,7 @@ header {
       float: left;
     }
     .el_bor-btm {
-      border-bottom: 1px solid $grey;
+      border-bottom: 0.5px solid $grey;
       display: block;
     }
   }
@@ -893,18 +890,18 @@ header {
 --------------------------------*/
 #recruit {
   height: 100vh;
-  background-color: $primary;
+  background-color: $white;
   .bl_section {
     &_ttl {
-      color: $white;
+      color: $primary;
       transition: 0.5s;
     }
     &_header {
-      color: $white;
+      color: $primary;
       transition: 0.5s;
     }
     &_txt {
-      color: $white;
+      color: $primary;
       transition: 0.5s;
     }
   }
@@ -914,7 +911,7 @@ header {
 --------------------------------*/
 #contact {
   height: 100vh;
-  background-color: $white;
+  background-color: $primary;
   .bl_section {
     &_wrapper {
       max-width: 700px;
@@ -923,13 +920,13 @@ header {
       text-align: center;
     }
     &_container {
-      color: $primary;
+      color: $white;
     }
     &_ttl {
-      color: $primary;
+      color: $white;
       text-align: center;
       &::after {
-        background-color: $primary;
+        background-color: $white;
         width: 100%;
         position: absolute;
         left: 50%;
@@ -942,10 +939,6 @@ header {
     }
     &_body {
       flex: 2;
-    }
-    &_txt {
-    }
-    .el_btn {
     }
   }
   .bl_production {
@@ -960,7 +953,7 @@ header {
     }
     p {
       font-size: 10px;
-      color: $primary;
+      color: $white;
     }
   }
 }
@@ -976,18 +969,20 @@ header {
 ここから各固定ページ
 --------------------------------*/
 #page-about {
+  z-index: -2;
   &.ly_section {
     display: block;
     align-items: unset;
   }
+  background-color: $primary;
   .bl_section {
     position: relative;
     &_img {
       z-index: 99;
     }
     &_ttl {
-      color: $primary;
-      border-bottom: 1px solid $primary;
+      color: $white;
+      border-bottom: 1px solid $white;
       &::after {
         content: none;
       }
@@ -997,24 +992,29 @@ header {
       margin-left: unset;
     }
     &_header {
-      color: $primary;
+      color: $white;
+    }
+    &_txt {
+      color: $white;
     }
   }
 }
 #page-service {
+  z-index: -2;
   &.ly_section {
     display: block;
     align-items: unset;
   }
+  background-color: $primary;
   .bl_section {
     &_img {
       z-index: 99;
     }
     position: relative;
     &_ttl {
-      color: $primary;
+      color: $white;
       text-align: right;
-      border-bottom: 1px solid $primary;
+      border-bottom: 1px solid $white;
       &::after {
         content: none;
       }
@@ -1036,22 +1036,33 @@ header {
       margin-left: 30px;
     }
     &_header {
-      color: $primary;
+      color: $white;
+    }
+    &_txt {
+      color: $white;
     }
   }
 }
 #page-recruit {
+  z-index: -2;
   &.ly_section {
-    display: block;
     align-items: unset;
   }
+  background-color: $primary;
   .bl_section {
-    &_img {
-      z-index: 99;
-    }
     position: relative;
     &_ttl {
-      border-bottom: 1px solid $primary;
+      color: $white;
+    }
+    &_img {
+      z-index: 99;
+      img {
+        width: 100%;
+        z-index: 99;
+      }
+    }
+    &_ttl {
+      border-bottom: 1px solid $white;
       &::after {
         content: none;
       }
@@ -1060,12 +1071,22 @@ header {
       margin-right: auto;
       margin-left: unset;
     }
+    &_header {
+      color: $white;
+    }
+    &_txt {
+      color: $white;
+    }
   }
   .bl_recruit {
     dt {
       width: 30%;
       padding: 20px 0;
       float: left;
+      color: $white;
+    }
+    dd {
+      color: $white;
     }
     .bl_recruit_definition {
       width: 70%;
@@ -1073,7 +1094,7 @@ header {
       float: left;
     }
     .el_bor-btm {
-      border-bottom: 1px solid $grey;
+      border-bottom: 0.5px solid $grey;
       display: block;
     }
   }
@@ -1081,7 +1102,9 @@ header {
 
 /* コンタクトフォームのスタイリング */
 #page-contact {
+  z-index: -2;
   // height: 100vh;
+  background-color: $primary;
   &.ly_section {
     display: block;
     align-items: unset;
@@ -1094,13 +1117,19 @@ header {
       z-index: 99;
     }
     &_ttl {
-      color: $primary;
+      color: $white;
       text-align: center;
-      border-bottom: 1px solid $primary;
+      border-bottom: 1px solid $white;
       &::after {
         content: none;
       }
     }
+    &_txt {
+    }
+  }
+  .el_section_lead{
+    color: $white;
+
   }
   .el_contact_lead {
     text-align: center;
@@ -1109,7 +1138,17 @@ header {
     text-align: center;
   }
   a {
+    color: $white;
     text-decoration: underline;
+  }
+  tbody{
+    color: $white;
+  }
+  form{
+    z-index: 99;
+  }
+  span{
+    color: $white;
   }
 }
 .wpcf7 {
@@ -1141,6 +1180,7 @@ tr {
   width: 100%;
   border: 0.5px solid $primary;
   resize: none;
+  background-color: $white;
   &::placeholder {
     color: #dddddd;
   }
@@ -1411,4 +1451,14 @@ canvas {
   left: 0;
   height: 100%;
   width: 100%;
+  z-index: -1;
+}
+
+.navi_list {
+  position: fixed;
+  top: 50%;
+  left: 10px;
+  .navi_item.now {
+    background-color: red;
+  }
 }

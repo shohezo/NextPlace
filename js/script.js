@@ -37,39 +37,40 @@ $(function () {
 });
 
 //セクションスクロール
-var current;
-$.scrollify({
-  section: ".box",
-  setHeights: false,
-  scrollbars: false,
-  updateHash: false, //URLの末尾に#◯をつけるか
-  // interstitialSection: true,
-  before: function (i, box) {
-    current = i;
-    $(".pagenation .active").removeClass("active");
-    $(".pagenation").find("a").eq(i).addClass("active");
-  },
-  afterRender: function () {
-    var pagenation = '<ul class="pagenation">';
-    $(".box").each(function (i) {
-      pagenation += "<li><a></a></li>";
-    });
-    pagenation += "</ul>";
-    $("body").append(pagenation);
-    $(".pagenation a").each(function (i) {
-      $(this).on("click", function () {
-        $.scrollify.move(i);
-      });
-    });
-    $(".pagenation li:first-child").find("a").addClass("active");
-  },
-});
-$(window).on("resize", function () {
-  if (current) {
-    var currentScrl = $(".box").eq(current).offset().top;
-    $(window).scrollTop(currentScrl);
-  }
-});
+// var current;
+// $.scrollify({
+//   section: ".box",
+//   easing: "easeOutQuint",
+//   setHeights: false,
+//   scrollbars: false,
+//   updateHash: false, //URLの末尾に#◯をつけるか
+//   // interstitialSection: true,
+//   before: function (i, box) {
+//     current = i;
+//     $(".pagenation .active").removeClass("active");
+//     $(".pagenation").find("a").eq(i).addClass("active");
+//   },
+//   afterRender: function () {
+//     var pagenation = '<ul class="pagenation">';
+//     $(".box").each(function (i) {
+//       pagenation += "<li><a></a></li>";
+//     });
+//     pagenation += "</ul>";
+//     $("body").append(pagenation);
+//     $(".pagenation a").each(function (i) {
+//       $(this).on("click", function () {
+//         $.scrollify.move(i);
+//       });
+//     });
+//     $(".pagenation li:first-child").find("a").addClass("active");
+//   },
+// });
+// $(window).on("resize", function () {
+//   if (current) {
+//     var currentScrl = $(".box").eq(current).offset().top;
+//     $(window).scrollTop(currentScrl);
+//   }
+// });
 
 //セクション毎のヘッダーパーツの色の変化
 function changeColor() {
@@ -97,13 +98,13 @@ function changeColor() {
   // 白背景以外の時はbodyの.bg-is-whiteを削除
   // 白背景の時はbodyに.bt-is-whiteを付与
   if (trigger2Y - timing > 0 && 0 >= trigger1Y - timing) {
-    body.classList.add("bg-is-blue");
+    body.classList.add("bg-is-white");
   } else if (trigger4Y - timing > 0 && 0 >= trigger3Y - timing) {
-    body.classList.add("bg-is-blue");
+    body.classList.add("bg-is-white");
   } else if (trigger6Y - timing > 0 && 0 >= trigger5Y - timing) {
-    body.classList.add("bg-is-blue");
+    body.classList.add("bg-is-white");
   } else {
-    body.classList.remove("bg-is-blue");
+    body.classList.remove("bg-is-white");
   }
 }
 
@@ -119,5 +120,53 @@ $(function () {
       $(".bl_newsbox").removeClass("none");
       $(".el_info").removeClass("none");
     }
+  });
+});
+
+
+//ナビとエリアとその数を取得
+var naviItem = $('li.pagenation_item');
+var boxItem = $('section.box');
+var naviNum = naviItem.length;
+var boxNum = boxItem.length;
+//いくつ増えてもいいように配列を用意
+var naviItemElm = new Array();
+var boxItemElm = new Array();
+var itemKey = new Array();
+var boxKey = new Array();
+var distance = new Array();
+var height = new Array();
+var endPoint = new Array();
+
+//スクロールするたびに以下が起動
+$(window).on('load scroll', function() {
+　　//スクロール量を取得
+    $scrollTopDistance = $(window).scrollTop();
+　　//ナビの数だけ以下を繰り返す
+    for(var a = 0; a < naviNum; a++){
+        naviItemElm[a] = naviItem.eq(a);
+        boxItemElm[a] = boxItem.eq(a);
+　　　　//hrefから#の文字を除く
+        itemKey[a] = naviItemElm[a].find('a').attr('href').replace(/#/g,"");
+        boxKey[a] = boxItemElm[a].attr('id');
+　　　　//-20で反応する位置を調整
+        distance[a] = boxItemElm[a].offset().top - 100;
+        height[a] = boxItemElm[a].outerHeight();
+        endPoint[a] = distance[a] + height[a];
+       //もし、hrefとidが同じで、現在スクロールがボックスの開始地点より大きく、終了地点より小さい場合、class="now"を付与する。
+        if(itemKey[a] == boxKey[a] && $scrollTopDistance > distance[a] && $scrollTopDistance < endPoint[a]){
+            naviItem.eq(a).addClass('now');
+        }else if($scrollTopDistance < distance[a] || $scrollTopDistance > endPoint[a]){
+            naviItem.eq(a).removeClass('now');
+        }
+    }
+});
+
+/* AOS */
+$(document).ready(function () {
+  /* animation */
+  AOS.init({
+    duration: 1000,
+    once: true,
   });
 });
