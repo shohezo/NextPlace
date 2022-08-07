@@ -10,7 +10,7 @@
 タブレット
 --------------------------------*/
 @media screen and (max-width: 959px) {
-  .bl_drawerBtn {
+  .hum_btn {
     display: block;
   }
   header nav {
@@ -95,28 +95,29 @@
     line-height: 1.6;
     font-size: 1.3rem;
   }
+  .hum_btn {
+    right: 0px;
+  }
   header .el_logo {
-    width: 35px;
-    height: 35px;
+    width: 200px;
     top: 20px;
     left: 20px;
   }
   header .el_logo_white {
-    width: 35px;
-    height: 35px;
+    width: 200px;
     top: 20px;
     left: 20px;
   }
   header .el_summary_txt {
     font-size: 1rem;
     left: 19px;
-    top: 4px;
+    top: 15px;
   }
   header .header__lines {
     position: fixed;
-    top: 20px;
+    top: 35px;
     left: 20px;
-    bottom: 20px;
+    bottom: 35px;
     right: 20px;
   }
   header .c-scrolldown {

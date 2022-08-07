@@ -59,16 +59,13 @@ Template Name: フロントページ
         </div>
         <div class="bl_section_container hp_flex hp_aic hp_column_sp">
             <figure class="bl_section_img">
-                <img src="<?php bloginfo('template_url');?>/img/logo_tate.png" />
+                <img src="<?php bloginfo('template_url');?>/img/service01.jpg" />
             </figure>
             <div class="bl_section_body">
-                <h3 class="bl_section_header">「挑戦し続ける信念を持ち次の場所へ」
+                <h3 class="bl_section_header">"挑戦し続ける信念を持ち<br>次の場所へ"
                 </h3>
                 <p class="bl_section_txt">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                    enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                    nisi ut aliquip ex ea commodo consequat.
+                    変化を恐れず、前進し続けます。
                 </p>
                 <a href="<?php bloginfo('url');?>/about" class="btn btn__white hp_mtSm">
                     <svg>
@@ -90,7 +87,7 @@ Template Name: フロントページ
         </div>
         <div class="bl_section_container">
             <div class="bl_section_body">
-                <h3 class="bl_section_header">セクション記事のヘッダー</h3>
+                <!-- <h3 class="bl_section_header">セクション記事のヘッダー</h3> -->
                 <p class="bl_section_txt">
                     営業代行事業/通信・住宅設備<br>
                     オーダースーツ事業/WearMaSKY.<br>
@@ -121,13 +118,9 @@ Template Name: フロントページ
                 <img src="<?php bloginfo('template_url');?>/img/message01.png" />
             </figure>
             <div class="bl_section_body">
-                <h3 class="bl_section_header">セクション記事のヘッダー</h3>
+                <h3 class="bl_section_header">挨拶の見出し</h3>
                 <p class="bl_section_txt">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                    enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                    nisi ut aliquip ex ea commodo consequat.
-                </p>
+                    代表からの挨拶が入ります。代表からの挨拶が入ります。代表からの挨拶が入ります。代表からの挨拶が入ります。代表からの挨拶が入ります。
                 <p>代表 梁原 一樹</p>
             </div>
             <div class="space"></div>
@@ -167,11 +160,8 @@ Template Name: フロントページ
                     </dd>
                     <dt>事業内容</dt>
                     <dd class="bl_company_definition">
-                        営業代行事業<br>
-                        オーダースーツ事業<br>
-                        物流事業<br>
-                        飲食事業<br>
-                        資産運用事業<br>
+                        営業代行事業/オーダースーツ事業<br>
+                        物流事業/飲食事業/資産運用事業<br>
                 </dl>
             </div>
         </div>
@@ -189,7 +179,7 @@ Template Name: フロントページ
                 <img src="<?php bloginfo('template_url');?>/img/recruit00.jpg" />
             </figure>
             <div class="bl_section_body">
-                <h3 class="bl_section_header">セクション記事のヘッダー</h3>
+                <h3 class="bl_section_header">共に成長し、高め合える環境がここに。</h3>
                 <p class="bl_section_txt">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                     eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -215,12 +205,9 @@ Template Name: フロントページ
         </div>
         <div class="bl_section_container">
             <div class="bl_section_body">
-                <h3 class="bl_section_header">セクション記事のヘッダー</h3>
+                <h3 class="bl_section_header">お仕事のご依頼、<br class="hp_br-sp">ご質問はこちらから。</h3>
                 <p class="bl_section_txt">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                    enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                    nisi ut aliquip ex ea commodo consequat.
+                    皆様出会えることを楽しみにしています。
                 </p>
             </div>
         </div>

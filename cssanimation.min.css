@@ -301,12 +301,13 @@
   }
 }
 .typing {
-  width: 500px;
+  width: 270px;
   white-space: nowrap;
-  border-right: 2px solid #3d378a;
-  -webkit-animation: typing 2s steps(12, end),
+  border-right: 2px solid #ffffff;
+  -webkit-animation: typing 3s steps(10, end),
     cursor 0.2s steps(12, end) infinite;
-  animation: typing 3s steps(12, end), cursor 0.2s steps(12, end) infinite;
+  animation: typing 3s steps(10, start), cursor 0.2s steps(12, end) infinite;
+  animation-delay: 1s; /* アニメーション開始時間 */
 }
 .electricity,
 .leSkateX span {

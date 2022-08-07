@@ -59,29 +59,38 @@
     <script type=" text/javascript" src="./js/jquery-migrate-1.4.1.min.js"></script>
 </head>
 <!-- ドロワーメニュー -->
-<div class="bl_drawer">
-    <ul class="bl_drawer_list">
-        <!-- 開いたときの中身 -->
-        <li class="bl_drawer_item"><a href="<?php echo esc_url(home_url('/'));?>">HOME</a></li>
-        <li class="bl_drawer_item"><a href="<?php bloginfo('url');?>/about">ABOUT</a></li>
-        <li class="bl_drawer_item"><a href="<?php bloginfo('url');?>/service">SERVICE</a></li>
-        <!-- <li class="bl_drawer_item"><a href="#message">MESSAGE</a></li>
-        <li class="bl_drawer_item"><a href="#company">COMPANY</a></li> -->
-        <li class="bl_drawer_item"><a href="<?php bloginfo('url');?>/recruit">RECRUIT</a></li>
-        <li class="bl_drawer_item"><a href="<?php bloginfo('url');?>/contact">CONTACT</a></li>
-    </ul>
-    <div class="bl_drawerBtn">
-        <!-- ハンバーガーボタン -->
-        <span class="hambarg"></span>
-        <span class="hambarg"></span>
-        <span class="hambarg"></span>
-    </div>
-    <!--bl_drawerBtn-->
+<input id="test" type="checkbox" />
+<label class="hum_btn" for="test">
+    <svg class="burger" width="60" height="60" viewbox="0 0 150 150">
+        <g stroke-width="3">
+            <line x1="6" y1="6" x2="80" y2="6"></line>
+            <line x1="6" y1="28" x2="80" y2="28"></line>
+            <line x1="6" y1="50" x2="80" y2="50"> </line>
+        </g>
+    </svg>
+    <svg class="close" width="60" height="60" viewbox="0 0 150 150">
+        <g stroke-width="3">
+            <line x1="42" y1="6" x2="42" y2="80"></line>
+            <line x1="6" y1="42" x2="80" y2="42"></line>
+        </g>
+    </svg>
+</label>
+<div class="menu">
+    <div class="menu_item"><a href="<?php echo esc_url(home_url('/'));?>">HOME</a></div>
+    <div class="menu_item"><a href="<?php bloginfo('url');?>/about">ABOUT</a></div>
+    <div class="menu_item"><a href="<?php bloginfo('url');?>/service">SERVICE</a></div>
+    <div class="menu_item"><a href="<?php bloginfo('url');?>/recruit">RECRUIT</a></div>
+    <div class="menu_item"><a href="<?php bloginfo('url');?>/contact">CONTACT</a></div>
 </div>
-<!--bl_drawer-->
 
 <body>
     <?php wp_body_open();?>
+    <!---画面遷移用-->
+    <!-- <div id="splash">
+        <div id="splash-logo"><img src="<?php bloginfo('template_url');?>/img/logo_yoko_white.png" alt="" /></div>
+    </div>
+    <div class="splashbg"></div> -->
+    <!-- <div id="container"> -->
     <header>
         <div class="header__lines">
             <span></span>
@@ -157,6 +166,10 @@
         <div class="el_summary_txt hp_flex hp_aic">
             <span>▷ </span>
             <p>愛知県名古屋市で通信コンサルティング</p>
+        </div>
+        <div class="el_insta">
+            <a href="https://www.instagram.com/kazuki_nextplace/" target="_blank" rel="noopener noreferrer"><i
+                    class="fa-brands fa-instagram"></i></a>
         </div>
         <div class="c-scrolldown">
             <div class="c-line"></div>
