@@ -33,27 +33,6 @@ Template Name: リクルートページ
         </div>
         <div class="bl_recruit hp_mtMd" data-aos="fade-up">
             <dl class="hp_clearfix">
-                <dt>募集対象</dt>
-                <dd class="bl_recruit_definition">
-                    募集条件が入ります。</dd>
-                <dd class="hp_clear">
-                    <span class="el_bor-btm"></span>
-                </dd>
-                <!-- <dt>募集学科</dt>
-                <dd class="bl_recruit_definition">2020年7月22日</dd>
-                <dd class="hp_clear">
-                    <span class="el_bor-btm"></span>
-                </dd> -->
-                <dt>募集条件</dt>
-                <dd class="bl_recruit_definition">募集条件が入ります。</dd>
-                <dd class="hp_clear">
-                    <span class="el_bor-btm"></span>
-                </dd>
-                <dt>雇用形態</dt>
-                <dd class="bl_recruit_definition">正社員・契約社員</dd>
-                <dd class="hp_clear">
-                    <span class="el_bor-btm"></span>
-                </dd>
                 <dt>仕事内容</dt>
                 <dd class="bl_recruit_definition">
                     - 営業代行事業<br>
@@ -63,15 +42,38 @@ Template Name: リクルートページ
                 <dd class="hp_clear">
                     <span class="el_bor-btm"></span>
                 </dd>
+                <dt>募集ポジション</dt>
+                <dd class="bl_recruit_definition">
+                    仕事内容に準じます。</dd>
+                <dd class="hp_clear">
+                    <span class="el_bor-btm"></span>
+                </dd>
+                <!-- <dt>募集学科</dt>
+                <dd class="bl_recruit_definition">2020年7月22日</dd>
+                <dd class="hp_clear">
+                    <span class="el_bor-btm"></span>
+                </dd> -->
+                <dt>募集条件</dt>
+                <dd class="bl_recruit_definition">条件が入ります。</dd>
+                <dd class="hp_clear">
+                    <span class="el_bor-btm"></span>
+                </dd>
+                <dt>雇用形態</dt>
+                <dd class="bl_recruit_definition">正社員・契約社員・業務委託</dd>
+                <dd class="hp_clear">
+                    <span class="el_bor-btm"></span>
+                </dd>
                 <dt>給与</dt>
                 <dd class="bl_recruit_definition">
                     固定給+歩合,フルコミッション<br>
                     <br>
-                    様々な手当や永続コミッション など
-                    給与形態は様々で給与に上限がなく
-                    やる気のある人が伸びる会社です。
-                    在籍の仲間と共にあなたの未来の成長に幸あれ。<br>
+                    様々な手当や永続コミッションなど給与形態は様々で給与に上限がなく,やる気のある人が伸びる会社です。
                 </dd>
+                <dd class="hp_clear">
+                    <span class="el_bor-btm"></span>
+                </dd>
+                <dt>福利厚生</dt>
+                <dd class="bl_recruit_definition">内容が入ります。</dd>
             </dl>
         </div>
     </div>

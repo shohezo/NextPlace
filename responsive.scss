@@ -83,10 +83,13 @@
 @media screen and(max-width:519px) {
   body {
     line-height: 1.6;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
   .hum_btn {
     right: 0px;
+  }
+  .btn {
+    line-height: 1.8;
   }
   header {
     .el_logo {
@@ -147,8 +150,14 @@
     img {
       top: 42%;
     }
-    .fv_copy{
+    .fv_copy {
+      top: 45vh;
       font-size: 2rem;
+    }
+  }
+  #policy {
+    .bl_section_container {
+      align-items: unset !important;
     }
   }
   .bl_section {
@@ -171,11 +180,18 @@
         object-fit: cover;
       }
     }
+    &_body {
+      width: 100%;
+    }
+  }
+  #company {
+    .bl_company {
+      width: 100%;
+    }
   }
   #splash-logo {
     width: 100px;
   }
-
   /* ヘルパークラス */
   .hp_br-sp {
     display: block;

@@ -6,20 +6,6 @@ Template Name: フロントページ
 ?>
 <section class="ly_fv box" id="fv">
     <div class="fv_copy">
-        <!-- <h2 class="cssanimation leFadeInTop sequence">Keep trying
-            Move on to the Next Place
-            with conviction
-        </h2> -->
-        <!-- <h2 class="cssanimation leScaleXIn sequence">Keep trying</h2>
-        <h2 class="cssanimation leScaleXIn sequence">
-            Move on to the
-        </h2>
-        <h2 class="cssanimation leScaleXIn sequence">
-            Next Place
-        </h2>
-        <h2 class="cssanimation leScaleXIn sequence">
-            with conviction
-        </h2> -->
         <h2>Keep trying</h2>
         <h2>
             Move on to the
@@ -31,43 +17,26 @@ Template Name: フロントページ
             with conviction.
         </h2>
     </div>
-    <!-- <img src=" <?php bloginfo('template_url');?>/img/copy.png" alt="" /> -->
-    <!-- <div id="video-area">
-        <video id="video" poster="<?php bloginfo('template_url');?>/img/movie.jpg" webkit-playsinline playsinline muted
-            autoplay loop> -->
-    <!--
-        poster：動画ファイルが利用できない環境で代替表示される画像
-        webkit-playsinline：iOS 9までのSafari用インライン再生指定
-        playsinline：iOS 10以降のSafari用インライン再生指定
-        muted：音声をミュートさせる
-        autoplay：動画を自動再生させる      color: $primary;
-        loop：動画をループさせる
-        controls：コントロールバーを表示する
-        -->
-    <!-- <source src="<?php bloginfo('template_url');?>/video/movie.mp4" type="video/mp4" />
-    <source src="<?php bloginfo('template_url');?>/video/movie.ogv" type="video/ogv" />
-    <source src="<?php bloginfo('template_url');?>/video/movie.webm" type="video/webm" />
-    <p>動画を再生できる環境ではありません。</p>
-    </video> -->
-    <!--/video-area-->
 </section>
-<section class="ly_section box" id="about">
+<section class="ly_section box" id="policy">
     <div class="bl_section_wrapper" data-aos="fade-up">
         <div class="bl_section_ttl">
-            <h2>ABOUT</h2>
-            <p>当社について</p>
+            <h2>POLICY</h2>
+            <p>理念</p>
         </div>
         <div class="bl_section_container hp_flex hp_aic hp_column_sp">
             <figure class="bl_section_img">
                 <img src="<?php bloginfo('template_url');?>/img/service01.jpg" />
             </figure>
             <div class="bl_section_body">
-                <h3 class="bl_section_header">"挑戦し続ける信念を持ち<br>次の場所へ"
+                <h3 class="bl_section_header">挑戦し続ける信念を持ち<br>
+                    次の場所へ。
+
                 </h3>
                 <p class="bl_section_txt">
                     変化を恐れず、前進し続けます。
                 </p>
-                <a href="<?php bloginfo('url');?>/about" class="btn btn__white hp_mtSm">
+                <a href="<?php bloginfo('url');?>/policy" class="btn btn__white hp_mtSm">
                     <svg>
                         <rect x="0" y="0" fill="none" width="100%" height="100%" />
                     </svg>
@@ -185,10 +154,7 @@ Template Name: フロントページ
             <div class="bl_section_body">
                 <h3 class="bl_section_header">共に成長し、高め合える環境がここに。</h3>
                 <p class="bl_section_txt">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                    enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                    nisi ut aliquip ex ea commodo consequat.
+                    弊社では、一緒に夢に向かって走る仲間を探しています。
                 </p>
                 <a href="<?php bloginfo('url');?>/recruit" class="btn btn__white hp_mtSm">
                     <svg>
@@ -210,16 +176,27 @@ Template Name: フロントページ
         <div class="bl_section_container">
             <div class="bl_section_body">
                 <h3 class="bl_section_header">お仕事のご依頼、<br class="hp_br-sp">ご質問はこちらから。</h3>
-                <p class="bl_section_txt">
+                <!-- <p class="bl_section_txt">
                     皆様出会えることを楽しみにしています。
-                </p>
+                </p> -->
             </div>
         </div>
         <a href="<?php bloginfo('url');?>/contact" class="btn btn__blue hp_mtSm">
             <svg>
                 <rect x="0" y="0" fill="none" width="100%" height="100%" />
             </svg>
-            MORE
+            HERE
+        </a>
+        <div class="bl_section_body">
+            <p class="bl_section_txt">
+                LINE公式アカウントからも受け付けております。
+            </p>
+        </div>
+        <a href="https://liff.line.me/1645278921-kWRPP32q/?accountId=969qiyau" class="btn btn__blue hp_mtSm">
+            <svg>
+                <rect x="0" y="0" fill="none" width="100%" height="100%" />
+            </svg>
+            LINE<span class="m1">登録</span>
         </a>
     </div>
     <a href="https://ss-design1104.com/" target="_blank" rel="noopener noreferrer" class="bl_production">
@@ -230,7 +207,7 @@ Template Name: フロントページ
 </section>
 <ul class="pagenation">
     <li class="pagenation_item"><a href="#fv"></a></li>
-    <li class="pagenation_item"><a href="#about"></a></li>
+    <li class="pagenation_item"><a href="#policy"></a></li>
     <li class="pagenation_item"><a href="#service"></a></li>
     <li class="pagenation_item"><a href="#message"></a></li>
     <li class="pagenation_item"><a href="#company"></a></li>

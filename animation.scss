@@ -1,0 +1,203 @@
+header {
+  $line-height: 60px;
+  $line-height-abs: -60px;
+  .c-scrolldown {
+    transition: 0.8s;
+    width: 1px;
+    height: 59px;
+    position: absolute;
+    left: 50%;
+    top: 89vh;
+    overflow: hidden;
+    .c-line {
+      transition: 0.8s;
+      width: 100%;
+      height: 100%;
+      display: block;
+      background: linear-gradient(
+        to bottom,
+        rgb(255, 255, 255) 50%,
+        rgba(255, 255, 255, 0) 50%
+      );
+      background-position: 0 $line-height-abs;
+      background-size: 100% 200%;
+      animation: scrolldown 2.2s cubic-bezier(0.76, 0, 0.3, 1) forwards infinite;
+    }
+  }
+  @keyframes scrolldown {
+    0% {
+      background-position: 0 $line-height-abs;
+    }
+    75% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 0 $line-height;
+    }
+  }
+}
+.bg-is-white {
+  .c-scrolldown {
+    .c-line {
+      width: 100%;
+      height: 100%;
+      display: block;
+      background: linear-gradient(
+        to bottom,
+        rgb(0, 63, 140) 50%,
+        rgba(255, 255, 255, 0) 50%
+      );
+      // background-position: 0 $line-height-abs;
+      background-size: 100% 200%;
+      animation: scrolldown 2.2s cubic-bezier(0.76, 0, 0.3, 1) forwards infinite;
+    }
+  }
+}
+
+/*========= ローディング画面のためのCSS ===============*/
+#splash {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: #333;
+  z-index: 9999999;
+  text-align: center;
+  color: #fff;
+  perspective: 1000; //正の値
+}
+
+#splash-logo {
+  width: 230px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/*========= 画面遷移のためのCSS ===============*/
+
+/*画面遷移アニメーション*/
+.splashbg {
+  display: none;
+  perspective: 1000; //正の値
+}
+
+/*bodyにappearクラスがついたら出現*/
+body.appear .splashbg {
+  display: block;
+  content: "";
+  position: fixed;
+  z-index: 9999;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  transform: scaleX(0);
+  background-color: #333; /*伸びる背景色の設定*/
+  animation-name: PageAnime;
+  animation-duration: 1.2s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  //1
+  transform: translateZ (0); // or will-change: filter;
+  //2
+  transition: transform 0.2s;
+  perspective: 1000; //正の値
+  transform: translate3d(0, 0, 0); // 1.
+}
+#splash-logo {
+  width: 200px;
+}
+
+@keyframes PageAnime {
+  0% {
+    transform-origin: right;
+    transform: scaleX(0);
+  }
+  50% {
+    transform-origin: right;
+    transform: scaleX(1);
+  }
+  50.001% {
+    transform-origin: left;
+  }
+  100% {
+    transform-origin: left;
+    transform: scaleX(0);
+  }
+}
+
+/*画面遷移の後現れるコンテンツ設定*/
+
+#container {
+  opacity: 0; /*はじめは透過0に*/
+}
+
+/*bodyにappearクラスがついたら出現*/
+body.appear #container {
+  animation-name: PageAnimeAppear;
+  animation-duration: 1s;
+  animation-delay: 0.8s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@keyframes PageAnimeAppear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/*--------------------------------
+loading animation
+--------------------------------*/
+/* ローディングアニメーション */
+.loading {
+  width: 100vw;
+  height: 100vh;
+  transition: all 2s;
+  background-color: #ffffff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+  opacity: 1;
+  visibility: visible;
+  perspective: 1000; //正の値
+  transform: translate3d(0, 0, 0); // 1.
+  .el_logo {
+    width: 80%;
+    max-width: 500px;
+    img {
+    }
+  }
+}
+.loading.is-active {
+  opacity: 0;
+  visibility: hidden;
+}
+.loading.none {
+  display: none;
+}
+.loading-animation {
+  width: 100vw;
+  height: 100vh;
+  transition: all 2s;
+  background-color: #ffffff;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  perspective: 1000; //正の値
+  transform: translate3d(0, 0, 0); // 1.
+}
+
+.loading-animation.is-active {
+  opacity: 1;
+  visibility: visible;
+}

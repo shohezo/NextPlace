@@ -93,10 +93,13 @@
 @media screen and (max-width: 519px) {
   body {
     line-height: 1.6;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
   .hum_btn {
     right: 0px;
+  }
+  .btn {
+    line-height: 1.8;
   }
   header .el_logo {
     width: 150px;
@@ -157,7 +160,13 @@
     top: 42%;
   }
   .ly_fv .fv_copy {
+    top: 45vh;
     font-size: 2rem;
+  }
+  #policy .bl_section_container {
+    -webkit-box-align: unset !important;
+        -ms-flex-align: unset !important;
+            align-items: unset !important;
   }
   .bl_section_ttl {
     font-size: 4rem;
@@ -178,6 +187,12 @@
     height: 200px;
     -o-object-fit: cover;
        object-fit: cover;
+  }
+  .bl_section_body {
+    width: 100%;
+  }
+  #company .bl_company {
+    width: 100%;
   }
   #splash-logo {
     width: 100px;

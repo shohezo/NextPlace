@@ -5,20 +5,33 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title></title>
-    <meta name="description" content="<?php bloginfo('description'); ?>" />
+    <meta name="description" content="<?php bloginfo("description"); ?>" />
     <!-- OGP -->
     <meta property="og:url" content="http://next-place.co.jp/" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="NextPlace" />
-    <meta property="og:description" content="通信事業のスペシャリスト | NextPlace" />
+    <meta property="og:description" content="名古屋市で事業コンサル・アパレル運営 | NextPlace" />
     <meta property="og:site_name" content="NextPlace" />
-    <meta property="og:image" content="" />
+    <meta property="og:image" content="http://next-place.co.jp/wp-content/themes/nextplace/img/logo_tate.png" />
     <!-- スタイルシートの読み込み -->
-    <link rel="stylesheet" href="<?php bloginfo('template_url');?>/reset.css" />
-    <link rel="shortcut icon" href="<?php bloginfo('template_url');?>/img/favicon.ico">
-    <link rel="stylesheet" href="<?php bloginfo('template_url');?>/style.css" />
-    <link rel="stylesheet" href="<?php bloginfo('template_url');?>/responsive.css" />
-    <link rel="stylesheet" href="<?php bloginfo('template_url');?>/cssanimation.min.css" />
+    <link rel="stylesheet" href="<?php bloginfo(
+        "template_url"
+    ); ?>/reset.css" />
+    <link rel="shortcut icon" href="<?php bloginfo(
+        "template_url"
+    ); ?>/img/favicon.ico">
+    <link rel="stylesheet" href="<?php bloginfo(
+        "template_url"
+    ); ?>/style.css" />
+    <link rel="stylesheet" href="<?php bloginfo(
+        "template_url"
+    ); ?>/responsive.css" />
+    <link rel="stylesheet" href="<?php bloginfo(
+        "template_url"
+    ); ?>/animation.css">
+    <link rel="stylesheet" href="<?php bloginfo(
+        "template_url"
+    ); ?>/cssanimation.min.css" />
     <!-- <link href="https://cdn.jsdelivr.net/gh/yesiamrocks/cssanimation.io@1.0.3/cssanimation.min.css" rel="stylesheet"> -->
     <script src="https://kit.fontawesome.com/30c76fcb1e.js" crossorigin="anonymous"></script>
     <!-- Adobe fonts -->
@@ -76,26 +89,40 @@
     </svg>
 </label>
 <div class="menu">
-    <div class="menu_item"><a href="<?php echo esc_url(home_url('/'));?>">HOME</a></div>
-    <div class="menu_item"><a href="<?php bloginfo('url');?>/about">ABOUT</a></div>
-    <div class="menu_item"><a href="<?php bloginfo('url');?>/service">SERVICE</a></div>
-    <div class="menu_item"><a href="<?php bloginfo('url');?>/recruit">RECRUIT</a></div>
-    <div class="menu_item"><a href="<?php bloginfo('url');?>/contact">CONTACT</a></div>
+    <div class="menu_item"><a href="<?php echo esc_url(
+        home_url("/")
+    ); ?>">HOME</a></div>
+    <div class="menu_item"><a href="<?php bloginfo(
+        "url"
+    ); ?>/policy">POLICY</a></div>
+    <div class="menu_item"><a href="<?php bloginfo(
+        "url"
+    ); ?>/service">SERVICE</a></div>
+    <div class="menu_item"><a href="<?php bloginfo(
+        "url"
+    ); ?>/recruit">RECRUIT</a></div>
+    <div class="menu_item"><a href="<?php bloginfo(
+        "url"
+    ); ?>/contact">CONTACT</a></div>
 </div>
 
 <body>
-    <?php wp_body_open();?>
+    <?php wp_body_open(); ?>
     <!--初回のローディングアニメーション -->
     <div class="loading">
         <div class="loading-animation">
             <a class="el_logo">
-                <img src=" <?php bloginfo('template_url');?>/img/logo_yoko.png" alt="ロゴマーク" />
+                <img src=" <?php bloginfo(
+                    "template_url"
+                ); ?>/img/logo_yoko.png" alt="ロゴマーク" />
             </a>
         </div>
     </div>
     <!---画面遷移用-->
     <div id="splash">
-        <div id="splash-logo"><img src=" <?php bloginfo('template_url');?>/img/loading.png" alt="ローディングの表示" />
+        <div id="splash-logo"><img src=" <?php bloginfo(
+            "template_url"
+        ); ?>/img/loading.png" alt="ローディングの表示" />
         </div>
     </div>
     <div class="splashbg"></div>
@@ -108,25 +135,36 @@
                 <span></span>
             </div>
             <div class="ly_inner hp_flex">
-                <a href="<?php echo esc_url(home_url('/'));?>" class="el_logo">
-                    <img src="<?php bloginfo('template_url');?>/img/logo_yoko.png" alt="" />
+                <a href="<?php echo esc_url(home_url("/")); ?>" class="el_logo">
+                    <img src="<?php bloginfo(
+                        "template_url"
+                    ); ?>/img/logo_yoko.png" alt="" />
                 </a>
-                <a href="<?php echo esc_url(home_url('/'));?>" class="el_logo_white">
-                    <img src="<?php bloginfo('template_url');?>/img/logo_yoko_white.png" alt="" />
+                <a href="<?php echo esc_url(
+                    home_url("/")
+                ); ?>" class="el_logo_white">
+                    <img src="<?php bloginfo(
+                        "template_url"
+                    ); ?>/img/logo_yoko_white.png" alt="" />
                 </a>
                 <nav>
                     <ul class="bl_header_list hp_flex hp_jcsb">
                         <li class="bl_header_item">
-                            <a
-                                href="<?php echo esc_url(home_url('/'));?>"><span>H</span><span>O</span><span>M</span><span>E</span></a>
+                            <a href="<?php echo esc_url(
+                                    home_url("/")
+                                ); ?>"><span>H</span><span>O</span><span>M</span><span>E</span></a>
                         </li>
                         <li class="bl_header_item">
                             <a
-                                href="<?php bloginfo('url');?>/about"><span>A</span><span>B</span><span>O</span><span>U</span><span>T</span></a>
+                                href="<?php bloginfo(
+                                    "url"
+                                ); ?>/policy"><span>A</span><span>B</span><span>O</span><span>U</span><span>T</span></a>
                         </li>
                         <li class="bl_header_item">
                             <a
-                                href="<?php bloginfo('url');?>/service"><span>S</span><span>E</span><span>R</span><span>V</span><span>I</span><span>C</span><span>E</span></a>
+                                href="<?php bloginfo(
+                                    "url"
+                                ); ?>/service"><span>S</span><span>E</span><span>R</span><span>V</span><span>I</span><span>C</span><span>E</span></a>
                         </li>
                         <!-- <li class="bl_header_item">
                         <a
@@ -138,46 +176,51 @@
                     </li> -->
                         <li class="bl_header_item">
                             <a
-                                href="<?php bloginfo('url');?>/recruit"><span>R</span><span>E</span><span>C</span><span>R</span><span>U</span><span>I</span><span>T</span></a>
+                                href="<?php bloginfo(
+                                    "url"
+                                ); ?>/recruit"><span>R</span><span>E</span><span>C</span><span>R</span><span>U</span><span>I</span><span>T</span></a>
                         </li>
                         <li class="bl_header_item">
                             <a
-                                href="<?php bloginfo('url');?>/contact"><span>C</span><span>O</span><span>N</span><span>T</span><span>A</span><span>C</span><span>T</span></a>
+                                href="<?php bloginfo(
+                                    "url"
+                                ); ?>/contact"><span>C</span><span>O</span><span>N</span><span>T</span><span>A</span><span>C</span><span>T</span></a>
                         </li>
                     </ul>
                 </nav>
             </div>
-            <?php if(is_home()){?>
+            <?php if (is_home()) { ?>
             <div class="bl_newsbox">
                 <p class="bl_newsbox_head">TOPICS</p>
                 <p class="bl_newsbox_body">
                     公式LINEから問い合わせ、ご依頼が可能です<br />
-                    <a href="https://liff.line.me/1645278921-kWRPP32q/?accountId=969qiyau"><img
-                            src="<?php bloginfo('template_url');?>/img/line.png" style="width: 20px"
+                    <a href="https://liff.line.me/1645278921-kWRPP32q/?accountId=969qiyau"><img src="<?php bloginfo(
+                                "template_url"
+                            ); ?>/img/line.png" style="width: 20px"
                             alt="" /><span>公</span><span>式</span><span>L</span><span>I</span><span>N</span><span>E</span><span>登</span><span>録</span></a>
                 </p>
             </div>
-            <?php }?>
+            <?php } ?>
             <div class="el_copyRight">
                 Copyright©NextPlace corp., ltd. All Rights Reserved.
             </div>
-            <?php if( !is_home()){?>
+            <?php if (!is_home()) { ?>
             <div class="el_info" style="bottom: 40px">
                 <p>Nagoya Office.</p>
                 <a href="tel:+81-052-935-5666" class="el_tel">052-935-5666</a>
             </div>
-            <?php }else if(is_home()){?>
+            <?php } elseif (is_home()) { ?>
             <div class="el_info">
                 <p>Nagoya Office.</p>
                 <a href="tel:+81-052-935-5666" class="el_tel">052-935-5666</a>
             </div>
-            <?php }else{}?>
+            <?php } else {} ?>
             <div class="el_summary_txt hp_flex hp_aic">
                 <span>▷ </span>
-                <p>愛知県名古屋市で通信コンサルティング</p>
+                <p>愛知県名古屋市で事業コンサル・アパレル運営</p>
             </div>
             <div class="c-scrolldown">
                 <div class="c-line"></div>
             </div>
         </header>
-        <?php wp_head();?>
+        <?php wp_head(); ?>

@@ -153,3 +153,12 @@ img {
   border: none;
   vertical-align: bottom;
 }
+
+input {
+  /* -webkit-appearance: none !important; */
+  -webkit-webkit: border bottom left radius 0px !important;
+  -moz-webkit: border bottom left radius 0px !important;
+  -ms-webkit: border bottom left radius 0px !important;
+  -o-webkit: border bottom left radius 0px !important;
+  webkit: border bottom left radius 0px !important;
+}

@@ -80,7 +80,7 @@ function changeColor() {
   var body = document.body;
 
   var trigger0 = document.getElementById("fv");
-  var trigger1 = document.getElementById("about");
+  var trigger1 = document.getElementById("policy");
   var trigger2 = document.getElementById("service");
   var trigger3 = document.getElementById("message");
   var trigger4 = document.getElementById("company");

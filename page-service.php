@@ -16,12 +16,9 @@ Template Name: サービスページ
             </figure>
             <div class="bl_section_body">
                 <h3 class="bl_section_header">営業代行事業</h3>
+                <span class="tag">通信・住宅設備</span>
                 <p class="bl_section_txt">
-                    通信・住宅設備
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                    enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                    nisi ut aliquip ex ea commodo consequat.
+                    仕事内容が入ります。仕事内容が入ります。仕事内容が入ります。仕事内容が入ります。
                 </p>
             </div>
             <div class="space"></div>
@@ -33,18 +30,19 @@ Template Name: サービスページ
                 <img src="<?php bloginfo('template_url');?>/img/service02.png" />
             </figure>
             <div class="bl_section_body">
-                <h3 class="bl_section_header">オーダースーツ事業
-                </h3>
-                <div class="el_insta">
-                    <a href="https://www.instagram.com/wearma_sky/" target="_blank" rel="noopener noreferrer"><i
-                            class="fa-brands fa-instagram"></i></a>
+                <div class="hp_flex hp_aic">
+                    <h3 class="bl_section_header hp_mr10">オーダースーツ事業
+                    </h3>
+                    <div class="el_insta">
+                        <a href="https://www.instagram.com/wearma_sky/" target="_blank" rel="noopener noreferrer"><i
+                                class="fa-brands fa-instagram"></i></a>
+                    </div>
                 </div>
-                <p class="bl_section_txt hp_mbSm">
-                    WearMaSKY.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                    eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                <span class="tag">WearMaSKY.</span>
+                <p class="bl_section_txt">
+                    仕事内容が入ります。仕事内容が入ります。仕事内容が入ります。仕事内容が入ります。
                 </p>
-                <a href="https://next-place.net/" class="btn btn__blue">
+                <a href="https://next-place.net/" class="btn btn__blue hp_mtSm">
                     <svg>
                         <rect x="0" y="0" fill="none" width="100%" height="100%" />
                     </svg>STORE</a>
@@ -59,12 +57,9 @@ Template Name: サービスページ
             </figure>
             <div class="bl_section_body">
                 <h3 class="bl_section_header">物流事業</h3>
+                <span class="tag">軽貨物運送</span>
                 <p class="bl_section_txt">
-                    軽貨物運送
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                    enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                    nisi ut aliquip ex ea commodo consequat.
+                    仕事内容が入ります。仕事内容が入ります。仕事内容が入ります。仕事内容が入ります。
                 </p>
             </div>
             <div class="space"></div>
@@ -77,11 +72,9 @@ Template Name: サービスページ
             </figure>
             <div class="bl_section_body">
                 <h3 class="bl_section_header">飲食事業</h3>
+                <span class="tag">レストラン運営</span>
                 <p class="bl_section_txt">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                    enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                    nisi ut aliquip ex ea commodo consequat.
+                    仕事内容が入ります。仕事内容が入ります。仕事内容が入ります。仕事内容が入ります。
                 </p>
             </div>
             <div class="space"></div>
@@ -94,12 +87,10 @@ Template Name: サービスページ
             </figure>
             <div class="bl_section_body">
                 <h3 class="bl_section_header">資産運用</h3>
+                <span class="tag">外資</span><span class="tag">PV</span><span class="tag">オフショア</span><span
+                    class="tag">海外銀行</span>
                 <p class="bl_section_txt">
-                    外資・PV・オフショア・海外銀行
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                    enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                    nisi ut aliquip ex ea commodo consequat.
+                    仕事内容が入ります。仕事内容が入ります。仕事内容が入ります。仕事内容が入ります。
                 </p>
             </div>
             <div class="space"></div>
@@ -112,12 +103,9 @@ Template Name: サービスページ
             </figure>
             <div class="bl_section_body">
                 <h3 class="bl_section_header">暗号通貨</h3>
+                <span class="tag">NISA</span>
                 <p class="bl_section_txt">
-                    NISA etc…
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                    enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                    nisi ut aliquip ex ea commodo consequat.
+                    仕事内容が入ります。仕事内容が入ります。仕事内容が入ります。仕事内容が入ります。
                 </p>
             </div>
             <div class="space"></div>
